@@ -87,21 +87,25 @@ long double s21_ceil(double x) {
 }
 
 long double s21_floor(double x) {
-    long double answer = 0.0;
-    if (x >= 0) {
-        if ((int)x - x != 0) {
-            answer = (long double)(int)x;
-        } else {
-            answer = x;
-        }
-    } else if (x < -0) {
-        if ((int)x - x != 0) {
-            answer = (long double)(int)x - 1;
-        } else {
-            answer = x - 1;
+    long double result = x;
+    if (!is_finite(x) || s21_fabs(x) >= 0x1.0p52) {
+        result = x;
+    } else {
+        if (x >= 0) {
+            if ((int)x - x != 0) {
+                result = (long double)(int)x;
+            } else {
+                result = x;
+            }
+        } else if (x < -0) {
+            if ((int)x - x != 0) {
+                result = (long double)(int)x - 1;
+            } else {
+                result = x;
+            }
         }
     }
-    return answer;
+    return result;
 }
 
 long double s21_cos(double x) {

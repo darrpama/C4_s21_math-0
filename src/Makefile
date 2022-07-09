@@ -29,6 +29,7 @@ clean:
 	rm -rf *.o *.gcda *.gcno *.out *.gch *.info
 	rm -rf test
 	rm -rf report
+	rm -rf math_test.c
 
 gcov_report:
 	$(CC) $(CFLAGS) --coverage -l check s21_string.c s21_string_test.c -o test

@@ -130,55 +130,55 @@ ck_assert(res1 == res21);
 double x  = 1;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos2
 double x  = -1;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos3
 double x  = 0;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos4
 double x  = 0.675;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos5
 double x  = -0.732;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos6
 double x  = 0.999999;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos7
 double x  = -0.000001;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos8
 double x  = 0.567567;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test acos9
 double x  = -0.567567;
 long double res1 = acos(x);
 long double res21 = s21_acos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase asin
 
@@ -186,55 +186,55 @@ ck_assert(res1 == res21);
 double x  = 1;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin2
 double x  = -1;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin3
 double x  = 0;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin4
 double x  = 0.672;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin5
 double x  = -0.785;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin6
 double x  = 0.999999;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin7
 double x  = -0.000001;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin8
 double x  = 0.567567;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test asin9
 double x  = -0.567567;
 long double res1 = asin(x);
 long double res21 = s21_asin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase atan
 
@@ -242,73 +242,73 @@ ck_assert(res1 == res21);
 double x = 1;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test stan2
 double x = 0;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan3
 double x = -1;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan4
 double x = 12;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan5
 double x = -65;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan6
 double x = SHRT_MIN;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan7
 double x = SHRT_MAX;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan8
 double x = INT_MAX;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan9
 double x = INT_MIN;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan10
 double x = -0.909856;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan11
 double x = 11.897008;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test atan12
 double x = 0.000002;
 long double res1 = atan(x);
 long double res21 = s21_atan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase ceil
 
@@ -316,73 +316,73 @@ ck_assert(res1 == res21);
 double x = 0;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil2
 double x = -4.18;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil3
 double x = 56.019;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil4
 double x = 15;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil5
 double x = -12;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil6
 double x = INT_MAX;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil7
 double x = INT_MIN;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil8
 double x = LONG_MAX;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil9
 double x = LONG_MIN;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil10
 double x = 0.0001;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil11
 double x = -0.000003;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test ceil12
 double x = S21M_PI;
 long double res1 = ceil(x);
 long double res21 = s21_ceil(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase cos
 
@@ -390,67 +390,67 @@ ck_assert(res1 == res21);
 double x = 0;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos2
 double x = S21M_PI;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos3
 double x = 1;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos4
 double x = -1;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos5
 double x = -S21M_PI;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos6
 double x = S21M_PI/2;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos7
 double x = -50;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos8
 double x = INT_MIN;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos9
 double x = INT_MAX;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos10
 double x = -34.567;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test cos11
 double x = 10;
 long double res1 = cos(x);
 long double res21 = s21_cos(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase exp
 
@@ -458,73 +458,73 @@ ck_assert(res1 == res21);
 double x = 1;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test xexp2
 double x = 2;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp3
 double x = 0;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp4
 double x = -1;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp5
 double x = -5;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp6
 double x = 0.875;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp7
 double x = -0.5984;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp8
 double x = 50.1;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp9
 double x = -90.5;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp10
 double x = 0.002;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp11
 double x = -0.002;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test exp12
 double x = S21_EPS;
 long double res1 = exp(x);
 long double res21 = s21_exp(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase floor
 
@@ -532,73 +532,73 @@ ck_assert(res1 == res21);
 double x = 0;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor2
 double x = -4.18;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor3
 double x = 56.019;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor4
 double x = 15;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor5
 double x = -12;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor6
 double x = INT_MAX;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor7
 double x = INT_MIN;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor8
 double x = LONG_MAX;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor9
 double x = LONG_MIN;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor10
 double x = 0.0001;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor11
 double x = -0.000003;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test floor12
 double x = S21M_PI;
 long double res1 = floor(x);
 long double res21 = s21_floor(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase fmod
 
@@ -607,98 +607,98 @@ double x = 1;
 double y = 1;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod2
 double x = 12;
 double y = -2;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod3
 double x = -15;
 double y = 5;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod4
 double x = 9;
 double y = 17;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod5
 double x = -8;
 double y = 17;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod6
 double x = 2;
 double y = 0;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod7
 double x = 14;
 double y = S21_INF;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod8
 double x = 98;
 double y = 5.6783;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod9
 double x = 25.645001;
 double y = 3;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod10
 double x = 56.906;
 double y = 7.86;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod11
 double x = LONG_MAX;
 double y = 1;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod12
 double x = SHRT_MIN;
 double y = -5;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod13
 double x = INT_MAX;
 double y = -8.9;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test fmod14
 double x = S21_INF;
 double y = S21_INF;
 long double res1 = fmod(x, y);
 long double res21 = s21_fmod(x, y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase log
 
@@ -706,79 +706,79 @@ ck_assert(res1 == res21);
 double x = 1;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test loh2
 double x = 0;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log3
 double x = 12;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log4
 double x = 90.67;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log5
 double x = -2;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log6
 double x = -2.84;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log7
 double x = S21_EPS;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log8
 double x = S21_INF;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log9
 double x = 0.675;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test loh10
 double x = -0.0964;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log11
 double x = INT_MAX;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log12
 double x = SHRT_MAX;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test log13
 double x = SHRT_MIN;
 long double res1 = log(x);
 long double res21 = s21_log(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase pow
 
@@ -787,98 +787,98 @@ double x = 1;
 double y = 1;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow2
 double x = 0;
 double y = 1;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow3
 double x = 12;
 double y = 0;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow4
 double x = 5;
 double y = -1;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow5
 double x = -6;
 double y = 2;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow6
 double x = 12.5;
 double y = 3;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow7
 double x = 87;
 double y = 1.567;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow8
 double x = -76.8;
 double y = 6;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow9
 double x = -74;
 double y = 2.61;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow10
 double x = -404.1;
 double y = 2.5;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow11
 double x = 76.8;
 double y = -6;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow12
 double x = 74;
 double y = -2.611;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow13
 double x = 404.1;
 double y = -2.5;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test pow14
 double x = INT_MAX;
 double y = 1;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase sin
 
@@ -886,67 +886,67 @@ ck_assert(res1 == res21);
 double x = 0;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin2
 double x = S21M_PI;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin3
 double x = 1;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin4
 double x = -1;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin5
 double x = -S21M_PI;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin6
 double x = S21M_PI/2;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin7
 double x = -50;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin8
 double x = INT_MIN;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin9
 double x = INT_MAX;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin10
 double x = -34.567;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sin11
 double x = 10;
 long double res1 = sin(x);
 long double res21 = s21_sin(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase tan
 
@@ -954,67 +954,67 @@ ck_assert(res1 == res21);
 double x = 0;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan2
 double x = S21M_PI;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan3
 double x = 1;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan4
 double x = -1;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan5
 double x = -S21M_PI;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan6
 double x = S21M_PI/2;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan7
 double x = -50;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan8
 double x = INT_MIN;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan9
 double x = INT_MAX;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan10
 double x = -34.567;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test tan11
 double x = 10;
 long double res1 = tan(x);
 long double res21 = s21_tan(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #tcase sqrt
 
@@ -1022,52 +1022,52 @@ ck_assert(res1 == res21);
 double x = 1;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt2
 double x = 4;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt3
 double x = 0;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt4
 double x = -5;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt5
 double x = 19;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt6
 double x = 456.7;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt7
 double x = SHRT_MAX;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt8
 double x = S21_EPS;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
 #test sqrt9
 double x = S21_INF;
 long double res1 = sqrt(x);
 long double res21 = s21_sqrt(x);
-ck_assert(res1 == res21);
+ck_assert(s21_fabs(res1 - res21) < S21_EPS1);

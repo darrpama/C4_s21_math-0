@@ -4,12 +4,19 @@
 #include <stdlib.h>
 
 #define S21_EPS 1e-12
+#define S21_EPS1 1e-6
 #define S21_LOG10 2.30258509299404568401799145468436421
-#define S21_NAN 0.0/0.0
-#define S21_INF 1.0/0.0
 #define S21M_PI 3.141592653589793238462643383279502884
 #define S21_E 2.718281828459
 
+#define S21_NAN (__builtin_nanf(""))
+#define S21_INF (__builtin_inff())
+
+#define is_nan(x) __builtin_isnan(x)
+#define is_inf(x) __builtin_isinf(x)
+#define is_finite(x) __builtin_isfinite(x)
+
+//  lib func
 int s21_abs(int x);
 long double s21_fabs(double x);
 int s21_nan(long double x);
