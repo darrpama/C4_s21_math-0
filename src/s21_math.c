@@ -68,21 +68,26 @@ long double s21_atan_calc(double x) {
 
 long double s21_ceil(double x) {
     long double answer = 0.0;
-    if (x >= 0) {
-        if ((int)x - x != 0) {
-            answer = (long double)(int)x + 1.0;
-        } else {
-            answer = x;
-        }
-    } else if (x < -1) {
-        if ((int)x - x != 0) {
-            answer = (long double)(int)x;
-        } else {
-            answer = x;
-        }
+    if (!is_finite(x) || s21_fabs(x) >= 0x1.0p52) {
+        answer = x;
     } else {
-        answer = -0.0;
+        if (x >= 0) {
+            if ((int)x - x != 0) {
+                answer = (long double)(int)x + 1.0;
+            } else {
+                answer = x;
+            }
+        } else if (x < -1) {
+            if ((int)x - x != 0) {
+                answer = (long double)(int)x;
+            } else {
+                answer = x;
+            }
+        } else {
+            answer = -0.0;
+        }
     }
+
     return answer;
 }
 
