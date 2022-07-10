@@ -43,9 +43,9 @@ long double s21_atan(double x) {
     if (x > -1 && x < 1) {
         sum = s21_atan_calc(x);
     } else if (x < -1) {
-        sum = S21M_PI/2 - s21_atan_calc(1/x);
-    } else if (x > 1) {
         sum = -S21M_PI/2 - s21_atan_calc(1/x);
+    } else if (x > 1) {
+        sum = S21M_PI/2 - s21_atan_calc(1/x);
     } else if (x == 0) {
         sum = 0;
     } else if (x == 1.0) {
@@ -60,7 +60,7 @@ long double s21_atan_calc(double x) {
     long double part = x, sum = x, n = 1;
     while (s21_fabs(part) > S21_EPS) {
         part = part * (-1) * x * x * (2 * n - 1) / (2 * n + 1);
-        n++;
+        n += 1;
         sum += part;
     }
     return sum;
@@ -113,17 +113,17 @@ long double s21_floor(double x) {
 }
 
 long double s21_cos(double x) {
-    long double part = 0, sum = 0;
+    long double part = 1, sum = 1;
+    int n = 1;
     x = x_cutter(x);
-    for (int n = 0; n <= 100; n++) {
-        if (n == 0)
-            part = 1;
-        else
-            part = part * ((-1) * x * x) / (2*n * (2*n - 1)); 
+    while (s21_fabs(part) > S21_EPS) {
+        part = part * (-1) * x * x / (2 * n * (2 * n - 1)); 
+        n++;
         sum += part;
     }
     return sum;
 }
+
 
 long double x_cutter(long double x) {
     int minus = 0;
@@ -331,13 +331,15 @@ long double s21_fmod(double x, double y) {
 }
 
 long double s21_sin(double x) {
-    long double part = 0, sum = 0;
+    long double part = 1, sum = 0;
     x = x_cutter(x);
-    for (int n = 0; n <= 100; n++) {
+    int n = 0;
+    while (s21_fabs(part) > 1e-20) {
         if (n == 0)
             part = x;
         else
             part = part * ((-1) * x * x) / (2 * n * (2 * n + 1)); 
+        n++;
         sum += part;
     }
     return sum;
