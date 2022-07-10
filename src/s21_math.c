@@ -116,7 +116,7 @@ long double s21_cos(double x) {
     long double part = 1, sum = 1;
     int n = 1;
     x = x_cutter(x);
-    while (s21_fabs(part) > S21_EPS) {
+    while (s21_fabs(part) > S21_EPS/10000) {
         part = part * (-1) * x * x / (2 * n * (2 * n - 1)); 
         n++;
         sum += part;
