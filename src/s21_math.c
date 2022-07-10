@@ -158,9 +158,10 @@ long double s21_exp(double x) {
     return sum;
 }
 
-long double s21_log (double x) {
+long double s21_log(double x) {
     long double res = 0;
     int counter = 0;
+    int counter1 = 0;
     if (x < 0) {
         res = 0.0/0.0;
     } else if (x == 0) {
@@ -173,11 +174,17 @@ long double s21_log (double x) {
             counter++;
         }
         res = counter * S21_LOG10 + s21_log(x);
+    } else if (x < 0.1) {
+        while (x < 0.1) {
+            x *= 10.0;
+            counter1++;
+        }
+        res = counter1 * S21_LOG01 + s21_log(x);
     } else {
         x--;
         long double part = -1, part2 = 1;
         int n = 1;
-        while (s21_fabs(part2) > S21_EPS) {
+        while (s21_fabs(part2) > S21_EPS/100) {
             part = part * (-1) * x;
             part2 = part / n;
             n++;
@@ -221,7 +228,7 @@ long double s21_pow_xz(double x, double y) {
     return res;
 }
 
-long double s21_pow_xl (double x, double y) {
+long double s21_pow_xl(double x, double y) {
     long double sum = 0;
     if (y == S21_INF) {
         if (x > -1) {
@@ -273,7 +280,7 @@ long double s21_pow (double x, double y) {
     } else if (x == 0) {
         sum = s21_pow_xz(x, y);
     } else if (x < 0) {
-        
+        sum = s21_pow_xl(x, y);
     }
     return sum;
 }
