@@ -87,7 +87,6 @@ long double s21_ceil(double x) {
             answer = -0.0;
         }
     }
-
     return answer;
 }
 
@@ -299,25 +298,29 @@ long double s21_sqrt (double x) {
 }
 
 long double s21_fmod(double x, double y) {
-    long double n = 0;
-    int minus_flag = 0;
-    y = s21_fabs(y);
-    if (x < 0) {
-        minus_flag = 1;
-        x = s21_fabs(x);
-    }
-    long double difference = x;
-    if (y == 0 || s21_nan(x) || s21_nan(y)) {
-        difference = 0.0/0.0;
+    long double result = 0.0;
+    int signx = 1;
+    if (x < 0)
+        signx = -1;
+    if (!is_nan(x) && !is_nan(y) && !(is_inf(x) && is_inf(y)) && \
+    !(s21_fabs(y) < S21_EPS1)) {
+        if (s21_fabs(x) < S21_EPS1 || s21_fabs(x) >= 0x1.0p52) {
+            result = 0.0;
+        } else if (is_inf(y)) {
+            result = x;
+        } else {
+            long double lx = x;
+            long double ly = y;
+            long long div = lx / ly;
+            if (signx == -1 && (lx - div * ly) == 0.0) 
+                result = -0.0;
+            else
+                result = lx - div * ly;
+        }
     } else {
-    while (difference > y) {
-        n++;
-        difference = x - n * y;
+        result = S21_NAN;
     }
-    }
-    if (minus_flag == 1)
-        difference = -difference;
-    return difference;
+    return result;
 }
 
 long double s21_sin(double x) {
