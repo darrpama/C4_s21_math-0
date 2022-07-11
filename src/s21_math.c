@@ -18,9 +18,9 @@ int s21_nan(long double x) {
 
 long double s21_asin(double x) {
     long double part = x, sum = x, n = 1;
-    if (x > 1 || x < -1)
+    if (x > 1 || x < -1) {
         sum = 0.0/0.0;
-    else if (x == 1) {
+    } else if (x == 1) {
         sum = S21M_PI / 2;
     } else if (x == -1) {
         sum = - S21M_PI / 2;
@@ -28,7 +28,7 @@ long double s21_asin(double x) {
         while (s21_fabs(part) > S21_EPS)  {
             part *= x * x * (2 * n - 1) * (2 * n) * (2 * n - 1) / ((2 * n + 1) * 4 * n * n);
             n++;
-            sum += part;  
+            sum += part;
         }
     }
     return sum;
@@ -117,7 +117,7 @@ long double s21_cos(double x) {
     int n = 1;
     x = x_cutter(x);
     while (s21_fabs(part) > S21_EPS/10000) {
-        part = part * (-1) * x * x / (2 * n * (2 * n - 1)); 
+        part = part * (-1) * x * x / (2 * n * (2 * n - 1));
         n++;
         sum += part;
     }
@@ -271,7 +271,7 @@ long double s21_pow_xl(double x, double y) {
     return sum;
 }
 
-long double s21_pow (double x, double y) {
+long double s21_pow(double x, double y) {
     long double sum = 0;
     if (s21_nan(x))
         sum = S21_NAN;
@@ -289,7 +289,7 @@ long double s21_tan(double x) {
     return s21_sin(x)/s21_cos(x);
 }
 
-long double s21_sqrt (double x) {
+long double s21_sqrt(double x) {
     long double xn1 = 10, xn = 0;
     if (s21_nan(x) || x < 0) {
         xn1 = S21_NAN;
@@ -319,7 +319,7 @@ long double s21_fmod(double x, double y) {
             long double lx = x;
             long double ly = y;
             long long div = lx / ly;
-            if (signx == -1 && (lx - div * ly) == 0.0) 
+            if (signx == -1 && (lx - div * ly) == 0.0)
                 result = -0.0;
             else
                 result = lx - div * ly;
@@ -338,7 +338,7 @@ long double s21_sin(double x) {
         if (n == 0)
             part = x;
         else
-            part = part * ((-1) * x * x) / (2 * n * (2 * n + 1)); 
+            part = part * ((-1) * x * x) / (2 * n * (2 * n + 1));
         n++;
         sum += part;
     }
