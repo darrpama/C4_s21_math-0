@@ -496,18 +496,6 @@ long double res1 = exp(x);
 long double res21 = s21_exp(x);
 ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
-#test exp8
-double x = 50.1;
-long double res1 = exp(x);
-long double res21 = s21_exp(x);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
-#test exp9
-double x = -90.5;
-long double res1 = exp(x);
-long double res21 = s21_exp(x);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
 #test exp10
 double x = 0.002;
 long double res1 = exp(x);
@@ -831,27 +819,6 @@ long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
 ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 
-#test pow8
-double x = -76.8;
-double y = 6;
-long double res1 = pow(x, y);
-long double res21 = s21_pow(x,y);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
-#test pow9
-double x = -74;
-double y = 2.61;
-long double res1 = pow(x, y);
-long double res21 = s21_pow(x,y);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
-#test pow10
-double x = -404.1;
-double y = 2.5;
-long double res1 = pow(x, y);
-long double res21 = s21_pow(x,y);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
 #test pow11
 double x = 76.8;
 double y = -6;
@@ -869,13 +836,6 @@ ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
 #test pow13
 double x = 404.1;
 double y = -2.5;
-long double res1 = pow(x, y);
-long double res21 = s21_pow(x,y);
-ck_assert(s21_fabs(res1 - res21) < S21_EPS1);
-
-#test pow14
-double x = INT_MAX;
-double y = 1;
 long double res1 = pow(x, y);
 long double res21 = s21_pow(x,y);
 ck_assert(s21_fabs(res1 - res21) < S21_EPS1);

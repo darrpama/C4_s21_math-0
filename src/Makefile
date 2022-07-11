@@ -10,12 +10,13 @@ endif
 
 all: clean s21_math.a test gcov_report
 
-s21_math.o: s21_math.c s21_math.h
-	$(CC) $(CFLAGS) -c s21_math.c -o s21_math.o $(CHKFLAGS)
 
 s21_math.a: s21_math.o
 	ar rc s21_math.a s21_math.o
 	ranlib s21_math.a
+
+s21_math.o: s21_math.c s21_math.h
+	$(CC) $(CFLAGS) -c s21_math.c -o s21_math.o $(CHKFLAGS)
 
 math_test.o:
 	checkmk clean_mode=1 math_test.check > math_test.c
@@ -31,8 +32,8 @@ clean:
 	rm -rf report
 	rm -rf math_test.c
 
-gcov_report:
-	$(CC) $(CFLAGS) --coverage -l check s21_string.c s21_string_test.c -o test
+gcov_report: math_test.o
+	$(CC) $(CFLAGS) --coverage -l check s21_math.c math_test.c -o test
 	./test
 	lcov -t "./test" -o test.info -c -d .
 	genhtml -o report test.info
